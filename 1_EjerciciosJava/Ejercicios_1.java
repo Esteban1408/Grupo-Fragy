@@ -1,5 +1,4 @@
-import javax.swing.JOptionPane;
-public class Ejercicio_1 {
+public class Ejercicios_1 {
 
 	public static void main(String[] args) {
 		//Lee el nombre del usuario
