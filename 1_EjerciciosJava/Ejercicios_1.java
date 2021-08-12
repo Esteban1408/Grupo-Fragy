@@ -1,6 +1,7 @@
 
 public class Ejercicios_1 {
 
+	
 	public static void main(String[] args) {
 		//Lee el nombre del usuario
 		String nombre;
