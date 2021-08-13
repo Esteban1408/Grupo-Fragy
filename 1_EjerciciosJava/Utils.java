@@ -16,7 +16,6 @@ public class Utils {
 	}
 	public double division (double n1_1, double n2_1) {
 		resultado2=n1_1/n2_1;
-		
 		return resultado;
 	}
 }
