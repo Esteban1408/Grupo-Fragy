@@ -5,20 +5,15 @@ public class UtilsMain {
 	public static void main(String[] args) {
 		final String error = "SOLO ESTAN PERMITIDOS NUMEROS";
 		Utils Entrada = new Utils();
-		int sel, a = 1;
+		int sel,conti;
 		boolean salir = false, operacion = false;
 		while (!salir && !operacion) {// Este es un bucle el cual no termina hasta que de la opcion de Salir y la opcion de operacion
-				sel = Integer.parseInt(JOptionPane.showInputDialog(
-						"Eliga una opcion \n1-Sumar \n2-Restar \n3-Multiplicar \n4-Dividir \n5-Salir"));
-				int n1, n2, res, conti;
-				double n1_1, n2_1, res_1;
+				sel = Integer.parseInt(JOptionPane.showInputDialog("Eliga una opcion \n1-Sumar \n2-Restar \n3-Multiplicar \n4-Dividir \n5-Salir"));
 				switch (sel) {
 				case 1:
 					try {
-						n1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
-						n2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese otro numero"));
-						res = Entrada.sumar(n1, n2);
-						JOptionPane.showMessageDialog(null, "Resultado: " + res, "SUMA", a);
+						Entrada.leer();
+						Entrada.sumar();
 						conti = Integer.parseInt(JOptionPane.showInputDialog("Desea hacer otra operacion? \n Si=1        No=0"));
 						if (conti == 0) {
 							operacion = true;
@@ -30,10 +25,8 @@ public class UtilsMain {
 					break;
 				case 2:
 					try {
-						n1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
-						n2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese otro numero"));
-						res = Entrada.restar(n1, n2);
-						JOptionPane.showMessageDialog(null, "Resultado: " + res, "RESTA", a);
+						Entrada.leer();
+						Entrada.restar();
 						conti = Integer.parseInt(JOptionPane.showInputDialog("Desea hacer otra operacion? \n Si=1        No=0"));
 						if (conti == 0) {
 							operacion = true;
@@ -44,10 +37,8 @@ public class UtilsMain {
 					break;
 				case 3:
 					try {
-						n1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
-						n2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese otro numero"));
-						res = Entrada.multiplicar(n1, n2);
-						JOptionPane.showMessageDialog(null, "Resultado: " + res, "Multiplicación", a);
+						Entrada.leer();
+						Entrada.multiplicar();
 						conti = Integer.parseInt(
 								JOptionPane.showInputDialog("Desea hacer otra operacion? \n Si=1        No=0"));
 						if (conti == 0) {
@@ -59,10 +50,8 @@ public class UtilsMain {
 					break;
 				case 4:
 					try {
-						n1_1 = Double.parseDouble(JOptionPane.showInputDialog("Ingrese un numero"));
-						n2_1 = Double.parseDouble(JOptionPane.showInputDialog("Ingrese otro numero"));
-						res_1 = Entrada.division(n1_1, n2_1);
-						JOptionPane.showMessageDialog(null, "Resultado: " + res_1, "División",a);
+						Entrada.leer2();
+						Entrada.division();
 						conti = Integer.parseInt(JOptionPane.showInputDialog("Desea hacer otra operacion? \n Si=1        No=0"));
 						if (conti == 0) {
 							operacion = true;
