@@ -12,6 +12,13 @@ public class Utils {
 		n1_1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
 		n2_1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese otro numero"));
 	}
+	public boolean leer3() {
+		conti = Integer.parseInt(JOptionPane.showInputDialog("Desea hacer otra operacion? \n Si=1        No=0"));
+		if (conti == 0) {
+			operacion = true;
+		}
+		return operacion;
+	}
 	public void sumar () {
 		resultado=n1+n2;
 		JOptionPane.showMessageDialog(null, "Resultado: " + resultado, "SUMA", a);
