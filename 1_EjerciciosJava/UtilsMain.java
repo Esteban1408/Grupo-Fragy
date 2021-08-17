@@ -3,7 +3,6 @@ import javax.swing.JOptionPane;
 public class UtilsMain {
 
 	public static void main(String[] args) {
-		final String error = "SOLO ESTAN PERMITIDOS NUMEROS";
 		Utils entrada = new Utils();
 		int select;
 		boolean salir = false, otraOperacion = false;
@@ -50,9 +49,8 @@ public class UtilsMain {
 				default:
 					JOptionPane.showMessageDialog(null, "ELIGA UNA OPCION DEL 1 AL 8 PORFAVOR","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
 				}
-
 			} catch (Exception e) {
-				JOptionPane.showMessageDialog(null, error,"ERROR",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "SOLO ESTAN PERMITIDOS NUMEROS","ERROR",JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}

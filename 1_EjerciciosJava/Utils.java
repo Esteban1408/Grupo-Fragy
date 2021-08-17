@@ -36,35 +36,35 @@ public class Utils {
 		JOptionPane.showMessageDialog(null, "Resultado: " + resultado2, "DIVISION", JOptionPane.INFORMATION_MESSAGE);
 	}
 	public void celsiusFahrenheit () {
-		double GC;
-		GC=Double.parseDouble(JOptionPane.showInputDialog("Digite grados: (Celsius)"));
+		double gradosCelsius;
+		gradosCelsius=Double.parseDouble(JOptionPane.showInputDialog("Digite grados: (Celsius)"));
 		
-		double GF=32 + ( (9 * GC) / 5);
+		double gradosFahrenheit=32 + ( (9 * gradosCelsius) / 5);
 		
-		JOptionPane.showMessageDialog(null, "Grados Celsius: "+ GC+"\nGrados Fahrenheit: "+GF,"Celsius a Fahrenheit",JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, "Grados Celsius: "+ gradosCelsius+"\nGrados Fahrenheit: "+gradosFahrenheit,"Celsius a Fahrenheit",JOptionPane.INFORMATION_MESSAGE);
 	}
 	public void areaTriangulo (){
-		int b,h;
-		double A;
-		b=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la base del triangulo "));
-		h=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la altura del triangulo "));
+		int base,altura;
+		double area;
+		base=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la base del triangulo "));
+		altura=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la altura del triangulo "));
 
-		A=(b*h)/2;
+		area=(base*altura)/2;
 
-		JOptionPane.showMessageDialog(null, "El area es: "+ A,"Area de un triangulo",JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, "El area es: "+ area,"Area de un triangulo",JOptionPane.INFORMATION_MESSAGE);
 	}
 	public void horaExacta() {
-		int H,M=1,S=1,DN;
-		H=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la hora "));
-		M=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el minuto "));
-		S=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo "));
-		DN=Integer.parseInt(JOptionPane.showInputDialog("¿AM o PM? "+"\n  0       1"));
+		int hora,minuto,segundo,amPm;
+		hora=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la hora "));
+		minuto=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el minuto "));
+		segundo=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo "));
+		amPm=Integer.parseInt(JOptionPane.showInputDialog("¿AM o PM? "+"\n  0       1"));
 		
-		if(13>H && H>=1 && 60>M && M>=0 && 60>S && S>=0 && DN==1) {
-			JOptionPane.showMessageDialog(null, "Tu hora: "+ H + ":"+ M + ":"+ S + " PM " +"es VALIDA","Hora",JOptionPane.INFORMATION_MESSAGE);
+		if(13>hora && hora>=1 && 60>minuto && minuto>=0 && 60>segundo && segundo>=0 && amPm==1) {
+			JOptionPane.showMessageDialog(null, "Tu hora: "+ hora + ":"+ minuto + ":"+ segundo + " PM " +"es VALIDA","Hora",JOptionPane.INFORMATION_MESSAGE);
 		}
-		else if(13>H && H>=1 && 60>M && M>=0 && 60>S && S>=0 && DN==0) {
-			JOptionPane.showMessageDialog(null, "Tu hora: "+ H + ":"+ M + ":"+ S + " AM " +"es VALIDA","Hora",JOptionPane.INFORMATION_MESSAGE);
+		else if(13>hora && hora>=1 && 60>minuto && minuto>=0 && 60>segundo && segundo>=0 && amPm==0) {
+			JOptionPane.showMessageDialog(null, "Tu hora: "+ hora + ":"+ minuto + ":"+ segundo + " AM " +"es VALIDA","Hora",JOptionPane.INFORMATION_MESSAGE);
 		}
 		else {
 			JOptionPane.showMessageDialog(null, "TU HORA NO ES VALIDA","Hora",JOptionPane.WARNING_MESSAGE);
