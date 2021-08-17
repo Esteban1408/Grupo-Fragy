@@ -4,56 +4,57 @@ public class UtilsMain {
 
 	public static void main(String[] args) {
 		final String error = "SOLO ESTAN PERMITIDOS NUMEROS";
-		Utils Entrada = new Utils();
-		int sel;
-		boolean salir = false, operacion = false;
-		while (!salir && !operacion) {// Este es un bucle el cual no termina hasta que de la opcion de Salir y la opcion de operacion
-				sel = Integer.parseInt(JOptionPane.showInputDialog("Eliga una opcion \n1-Sumar \n2-Restar \n3-Multiplicar \n4-Dividir \n5-Salir"));
-				switch (sel) {
+		Utils entrada = new Utils();
+		int select;
+		boolean salir = false, otraOperacion = false;
+		while (!salir && !otraOperacion) {// Este es un bucle el cual no termina hasta que de la opcion de Salir y opcion de operacion
+			try {
+				select = Integer.parseInt(JOptionPane.showInputDialog(null,"Eliga una opcion \n1-Sumar \n2-Restar \n3-Multiplicar \n4-Dividir \n5-Celsius a Fahrenheit \n6-Area de un Triangulo \n7-Validar una hora exacta \n8-Salir","Calculadora",JOptionPane.INFORMATION_MESSAGE));
+				switch (select) {
 				case 1:
-					try {
-						Entrada.leer();
-						Entrada.sumar();
-						operacion=Entrada.leer3();
-					} catch (Exception e) {
-						JOptionPane.showMessageDialog(null, error);
-					}
-
+					entrada.leer();
+					entrada.sumar();
+					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 2:
-					try {
-						Entrada.leer();
-						Entrada.restar();
-						operacion=Entrada.leer3();
-					} catch (Exception e) {
-						JOptionPane.showMessageDialog(null, error);
-					}
+					entrada.leer();
+					entrada.restar();
+					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 3:
-					try {
-						Entrada.leer();
-						Entrada.multiplicar();
-						operacion=Entrada.leer3();
-					} catch (Exception e) {
-						JOptionPane.showMessageDialog(null, error);
-					}
+					entrada.leer();
+					entrada.multiplicar();
+					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 4:
-					try {
-						Entrada.leer2();
-						Entrada.division();
-						operacion=Entrada.leer3();
-					} catch (Exception e) {
-						JOptionPane.showMessageDialog(null, error);
-					}
+					entrada.leerBoolean();
+					entrada.division();
+					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 5:
+					entrada.celsiusFahrenheit();
+					otraOperacion = entrada.hacerOtraOperacion();
+					break;
+				case 6:
+					entrada.areaTriangulo();
+					otraOperacion = entrada.hacerOtraOperacion();
+					break;
+				case 7:
+					entrada.horaExacta();
+					otraOperacion = entrada.hacerOtraOperacion();
+					break;
+				case 8:
 					salir = true;
-					operacion = true;
+					otraOperacion = true;
 					break;
 				default:
-					JOptionPane.showMessageDialog(null, "ELIGA UNA OPCION DEL 1 AL 5 PORFAVOR");
+					JOptionPane.showMessageDialog(null, "ELIGA UNA OPCION DEL 1 AL 8 PORFAVOR","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
+				}
+
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, error,"ERROR",JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}
 }
+	
