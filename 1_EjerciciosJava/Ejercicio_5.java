@@ -5,7 +5,7 @@ public class Ejercicio_5 {
 	public static void main(String[] args) {
 		try {
 		int n;
-		n=Integer.parseInt(JOptionPane.showInputDialog("Ingrese edad"));
+		n=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero: "));
 		
 		if( n<=9 && n>=0) {
 			JOptionPane.showMessageDialog(null, n+" si es un numero :)");
