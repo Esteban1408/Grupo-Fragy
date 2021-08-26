@@ -97,7 +97,7 @@ public class UtilsMain {
 					otraOperacion = true;
 					break;
 				default:
-					JOptionPane.showMessageDialog(null, "ELIGA UNA OPCION DEL 1 AL 8 PORFAVOR", "ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showMessageDialog(null, "ELIGA UNA OPCION DEL 1 AL 11 PORFAVOR", "ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
 					break;
 				}
 			}

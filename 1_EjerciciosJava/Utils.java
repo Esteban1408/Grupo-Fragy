@@ -2,8 +2,8 @@ import javax.swing.JOptionPane;
 
 public class Utils {
 	int continuar;
-	double resultado=0,number1,number2,number1Boolean,number2Boolean;
-	boolean salir = false, otraOperacion = false;
+	double resultado=0,number1,number2;
+	boolean otraOperacion = false;
 	UtilsMain imprimir = new UtilsMain();
 	public Utils() {
 		
