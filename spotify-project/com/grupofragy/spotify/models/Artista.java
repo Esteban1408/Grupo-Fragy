@@ -1,7 +1,7 @@
 package com.grupofragy.spotify.models;
 
 public class Artista {
-	private String nombre,foto,cancion;
+	private String nombre,foto;
 	private Integer usuariosQueLoSiguen;
 	public Artista() {
 		
@@ -12,9 +12,6 @@ public class Artista {
 	public void asignarFoto(String foto) {
 		this.foto = foto;
 	}
-	public void asignarCancion(String cancion) {
-		this.cancion = cancion;
-	}
 	public void asignarUsuariosQueLoSiguen(Integer usuariosQueLoSiguen) {
 		this.usuariosQueLoSiguen = usuariosQueLoSiguen;
 	}
@@ -23,9 +20,6 @@ public class Artista {
 	}
 	public String obtenerFoto() {
 		return foto;
-	}
-	public String obtenerCancion() {
-		return cancion;
 	}
 	public Integer obtenerUsuariosQueLoSiguen() {
 		return usuariosQueLoSiguen;

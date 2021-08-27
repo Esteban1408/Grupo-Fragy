@@ -49,60 +49,92 @@ public class SpotifyMain {
 		imprimirResultado(fecha2);
 		imprimirResultado(sexo2);
 		imprimirResultado(recibirPublicidad2);
+		
 		System.out.println("---------------------------");
+		
+		Cancion cancion1 = new Cancion();
+		cancion1.asignarNombre("Latency");
+		cancion1.asignarFoto("Foto Chida aqui");
+		cancion1.asignarDuracion(3.1);
+		cancion1.asignarUsuariosQueLaEscuchan(654321);
+		String nombre1Cancion="Nombre: "+cancion1.obtenerNombre();
+		String Foto1Cancion="Foto: "+cancion1.obtenerFoto();
+		String Duracion1="Duración: "+cancion1.obtenerDuracion();
+		String usuariosQueLaEscuchan1="Usuarios que la Escuchan: "+cancion1.obtenerUsuariosQueLaEscuchan();
+		imprimirResultado(nombre1Cancion);
+		imprimirResultado(Foto1Cancion);
+		imprimirResultado(Duracion1);
+		imprimirResultado(usuariosQueLaEscuchan1);
+		System.out.println(" ");
+		Cancion cancion2 = new Cancion();
+		cancion2.asignarNombre("Higher Ground");
+		cancion2.asignarFoto("Foto Chida aqui");
+		cancion2.asignarDuracion(3.4);
+		cancion2.asignarUsuariosQueLaEscuchan(2131321);
+		String nombre2Cancion="Nombre: "+cancion1.obtenerNombre();
+		String Foto2Cancion="Foto: "+cancion1.obtenerFoto();
+		String Duracion2="Duración: "+cancion1.obtenerDuracion();
+		String usuariosQueLaEscuchan2="Usuarios que la Escuchan: "+cancion1.obtenerUsuariosQueLaEscuchan();
+		imprimirResultado(nombre2Cancion);
+		imprimirResultado(Foto2Cancion);
+		imprimirResultado(Duracion2);
+		imprimirResultado(usuariosQueLaEscuchan2);
+		
+		System.out.println("---------------------------");
+		
 		Artista artista1 = new Artista();
 		artista1.asignarNombre("Martin Garrix");
 		artista1.asignarFoto("Foto Chida aqui");
-		artista1.asignarCancion("safff2121");
 		artista1.asignarUsuariosQueLoSiguen(2131321);
-		String nombre1Cancion="Nombre: "+artista1.obtenerNombre();
-		String Foto1Cancion="Foto: "+artista1.obtenerFoto();
-		String Cancion1="canciones: "+artista1.obtenerCancion();
+		String nombre1Artista="Nombre: "+artista1.obtenerNombre();
+		String Foto1Artista="Foto: "+artista1.obtenerFoto();
 		String usuariosQueLoSiguen1="Usuarios que lo siguen: "+artista1.obtenerUsuariosQueLoSiguen();
+		imprimirResultado(nombre1Artista);
+		imprimirResultado(Foto1Artista);
 		imprimirResultado(nombre1Cancion);
 		imprimirResultado(Foto1Cancion);
-		imprimirResultado(Cancion1);
+		imprimirResultado(Duracion1);
+		imprimirResultado(usuariosQueLaEscuchan1);
 		imprimirResultado(usuariosQueLoSiguen1);
 		System.out.println(" ");
 		Artista artista2 = new Artista();
 		artista2.asignarNombre("Martin Garrix");
 		artista2.asignarFoto("Foto Chida aqui");
-		artista2.asignarCancion("safff2121");
 		artista2.asignarUsuariosQueLoSiguen(2131321);
-		String nombre2Cancion="Nombre: "+artista2.obtenerNombre();
-		String Foto2Cancion="Foto: "+artista2.obtenerFoto();
-		String Cancion2="canciones: "+artista1.obtenerCancion();
+		String nombre2Artista="Nombre: "+artista2.obtenerNombre();
+		String Foto2Artista="Foto: "+artista2.obtenerFoto();
 		String usuariosQueLoSiguen2="Usuarios que lo siguen: "+artista1.obtenerUsuariosQueLoSiguen();
-		imprimirResultado(nombre1Cancion);
-		imprimirResultado(Foto1Cancion);
-		imprimirResultado(Cancion1);
-		imprimirResultado(usuariosQueLoSiguen1);
-
-		
-		
+		imprimirResultado(nombre2Artista);
+		imprimirResultado(Foto2Artista);
+		imprimirResultado(nombre2Cancion);
+		imprimirResultado(Foto2Cancion);
+		imprimirResultado(Duracion2);
+		imprimirResultado(usuariosQueLaEscuchan2);
+		imprimirResultado(usuariosQueLoSiguen2);
+	
 		System.out.println("---------------------------");
-		Artista cancion1 = new Artista();
-		cancion1.asignarNombre("Martin Garrix");
-		cancion1.asignarFoto("Foto Chida aqui");
-		cancion1.asignarCancion("safff2121");
-		cancion1.asignarUsuariosQueLoSiguen(2131321);
-		String nombre1Cancion="Nombre: "+artista2.obtenerNombre();
-		String Foto1Cancion="Foto: "+artista2.obtenerFoto();
-		String Cancion2="canciones: "+artista1.obtenerCancion();
-		String usuariosQueLoSiguen2="Usuarios que lo siguen: "+artista1.obtenerUsuariosQueLoSiguen();
-		imprimirResultado(nombre1Cancion);
-		imprimirResultado(Foto1Cancion);
-		imprimirResultado(Cancion1);
-		imprimirResultado(usuariosQueLoSiguen1);
+		
+		Playlist playlist1 = new Playlist();
+		playlist1.asignarFotoAlbum("Foto chida aqui x2");
+		playlist1.asignarNombre("Se fue con otro");
+		playlist1.asignarIconoFavorito("S");
+		String fotoalbum1="Foto: "+playlist1.obtenerFotoAlbum();
+		String nombreAlbum1="Album: "+playlist1.obtenerNombre();
+		String iconoFavorito1="Le gusta? S/N: "+playlist1.obtenerIconoFavorito();
+		imprimirResultado(fotoalbum1);
+		imprimirResultado(nombreAlbum1);
+		imprimirResultado(iconoFavorito1);
 		System.out.println(" ");
-		Cancion cancion2 = new Cancion("Latency","Foto");
-		cancion2.imprimirCancion(3.34, 3042302);
-		System.out.println("---------------------------");
-		Playlist playlist1 = new Playlist("Foto Album","El rascacielos","Metalica");
-		playlist1.imprimirPlaylist("<3", "Muchas canciones aqui");
-		System.out.println(" ");
-		Playlist playlist2 = new Playlist("Foto Album","You are not Alone","David Guetta");
-		playlist2.imprimirPlaylist("<3", "Muchas canciones aqui");
+		Playlist playlist2 = new Playlist();
+		playlist2.asignarFotoAlbum("Foto chida aqui x2");
+		playlist2.asignarNombre("Grupo marrano");
+		playlist2.asignarIconoFavorito("N");
+		String fotoalbum2="Foto: "+playlist2.obtenerFotoAlbum();
+		String nombreAlbum2="Album: "+playlist2.obtenerNombre();
+		String iconoFavorito2="Le gusta? S/N: "+playlist2.obtenerIconoFavorito();
+		imprimirResultado(fotoalbum2);
+		imprimirResultado(nombreAlbum2);
+		imprimirResultado(iconoFavorito2);
 		
 	}
 	public static void imprimirResultado(String resultado) {

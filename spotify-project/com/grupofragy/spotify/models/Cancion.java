@@ -16,7 +16,7 @@ public class Cancion {
 	public void asignarDuracion(Double duracion) {
 		this.duracion = duracion;
 	}
-	public void asignarUsuariosQueLoSiguen(Integer usuariosQueLaEscuchan) {
+	public void asignarUsuariosQueLaEscuchan(Integer usuariosQueLaEscuchan) {
 		this.usuariosQueLaEscuchan = usuariosQueLaEscuchan;
 	}
 	public String obtenerNombre() {

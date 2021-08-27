@@ -1,18 +1,28 @@
 package com.grupofragy.spotify.models;
 
 public class Playlist {
-	String fotoAlbum,nombre,artista;
-	public Playlist(String fotoAlbum,String nombre,String artista) {
+	private String fotoAlbum,nombre,iconoFavorito;
+	public Playlist() {
+		
+	}
+	public void asignarFotoAlbum(String fotoAlbum) {
 		this.fotoAlbum = fotoAlbum;
+	}
+	public void asignarNombre(String nombre) {
 		this.nombre = nombre;
-		this.artista = artista;
 	}
-	public void imprimirPlaylist(String iconoFavorito,String cancion) {
-		System.out.println("Foto: "+fotoAlbum);
-		System.out.println("Nombre: "+nombre);
-		System.out.println("Artista: "+artista);
-		System.out.println("Icono: "+iconoFavorito);
-		System.out.println("Canciones: "+ cancion);
+	public void asignarIconoFavorito(String iconoFavorito) {
+		this.iconoFavorito = iconoFavorito;
 	}
+	public String obtenerFotoAlbum() {
+		return fotoAlbum;
+	}
+	public String obtenerNombre() {
+		return nombre;
+	}
+	public String obtenerIconoFavorito() {
+		return iconoFavorito;
+	}
+	
 
 }
