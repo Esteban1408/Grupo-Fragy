@@ -1,16 +1,35 @@
 package com.grupofragy.spotify.models;
 
 public class Cancion {
-	String nombre,foto;
-	public Cancion(String nombre,String foto) {
+	private String nombre,foto;
+	private Double duracion;
+	private Integer usuariosQueLaEscuchan;
+	public Cancion() {
+		
+	}
+	public void asignarNombre(String nombre) {
 		this.nombre = nombre;
+	}
+	public void asignarFoto(String foto) {
 		this.foto = foto;
 	}
-	public void imprimirCancion(double duracion,int usuariosQueLoEscuchan) {
-		System.out.println("Nombre: "+nombre);
-		System.out.println("Foto: "+foto);
-		System.out.println("Canciones: "+duracion);
-		System.out.println("Usuarios que lo siguen: "+usuariosQueLoEscuchan);
+	public void asignarDuracion(Double duracion) {
+		this.duracion = duracion;
+	}
+	public void asignarUsuariosQueLoSiguen(Integer usuariosQueLaEscuchan) {
+		this.usuariosQueLaEscuchan = usuariosQueLaEscuchan;
+	}
+	public String obtenerNombre() {
+		return nombre;
+	}
+	public String obtenerFoto() {
+		return foto;
+	}
+	public Double obtenerDuracion() {
+		return duracion;
+	}
+	public Integer obtenerUsuariosQueLaEscuchan() {
+		return usuariosQueLaEscuchan;
 	}
 
 }
