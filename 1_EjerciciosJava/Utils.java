@@ -4,90 +4,96 @@ public class Utils {
 	int continuar;
 	double resultado=0,number1,number2;
 	boolean otraOperacion = false;
-	UtilsMain imprimir = new UtilsMain();
 	public Utils() {
 		
 	}
 	public boolean hacerOtraOperacion() {
-		continuar = Integer.parseInt(JOptionPane.showInputDialog("Desea hacer otra operacion? \n Si=1        No=0"));
+		continuar = Integer.parseInt(JOptionPane.showInputDialog("Desea hacer otra operacion? \n Si=1         No=0"));
 		if (continuar == 0) {
 			otraOperacion = true;
 		}
 		return otraOperacion;
 	}
-	public void sumar (double n1,double n2) {
+	public String sumar (double n1,double n2) {
 		resultado=n1+n2;
 		String result= "Resultado: "+resultado;
-		imprimir.imprimirResultado(result,"Suma");
+		return result;
 	}
-	public void restar (double n1,double n2) {
+	public String restar (double n1,double n2) {
 		resultado=n1-n2;
 		String result= "Resultado: "+resultado;
-		imprimir.imprimirResultado(result,"Resta");
+		return result;
 	}
-	public void multiplicar (double n1,double n2) {
+	public String multiplicar (double n1,double n2) {
 		resultado=n1*n2;
 		String result= "Resultado: "+resultado;
-		imprimir.imprimirResultado(result,"Multiplicacion");
+		return result;
 	}
-	public void division (double n1,double n2) {
+	public String division (double n1,double n2) {
 		resultado=n1/n2;
 		String result= "Resultado: "+resultado;
-		imprimir.imprimirResultado(result,"Division");
+		return result;
 	}
 	
-	public void celsiusFahrenheit (double gradosCelsius) {
+	public String celsiusFahrenheit (double gradosCelsius) {
 		double gradosFahrenheit=32 + ( (9 * gradosCelsius) / 5);
 		String result = "Grados Celsius: "+gradosCelsius+"\nGrados Fahrenheit: "+gradosFahrenheit;
-		imprimir.imprimirResultado(result,"Celsius a Fahrenheit");
+		return result;
 	}
-	public void areaTriangulo (double n1,double n2){
+	public String areaTriangulo (double n1,double n2){
 		double area;
 		area=(n1*n2)/2;
 		String result= "El area es: "+area;
-		imprimir.imprimirResultado(result,"Area de un Triangulo");
+		return result;
 	}
-	public void horaExacta(int hora,int minuto,int segundo,int amPm) {
+	public String horaExacta(int hora,int minuto,int segundo,int amPm) {
+		String mensaje;
 		if(13>hora && hora>=1 && 60>minuto && minuto>=0 && 60>segundo && segundo>=0 && amPm==1) {
-			String mensaje1 = "Tu hora: "+ hora + ":"+ minuto + ":"+ segundo + " PM " +"es VALIDA";
-			imprimir.imprimirResultado(mensaje1,"Hora");
+			mensaje = "Tu hora: "+ hora + ":"+ minuto + ":"+ segundo + " PM " +"es VALIDA";
+			return mensaje;
 		}
 		else if(13>hora && hora>=1 && 60>minuto && minuto>=0 && 60>segundo && segundo>=0 && amPm==0) {
 			JOptionPane.showMessageDialog(null, "Tu hora: "+ hora + ":"+ minuto + ":"+ segundo + " AM " +"es VALIDA","Hora",JOptionPane.INFORMATION_MESSAGE);
-			String mensaje2 = "Tu hora: "+ hora + ":"+ minuto + ":"+ segundo + " AM " +"es VALIDA";
-			imprimir.imprimirResultado(mensaje2,"Hora");
+			mensaje = "Tu hora: "+ hora + ":"+ minuto + ":"+ segundo + " AM " +"es VALIDA";
+			return mensaje;
 		}
 		else {
-			imprimir.imprimirResultado("TU HORA NO ES VALIDA","Hora");
+			mensaje = "TU HORA NO ES VALIDA";
+			return mensaje;
 		}
 	}
-	public void validarNumeroParImpar(double n1) {
+	public String validarNumeroParImpar(double n1) {
 		double PI=n1%2;
-		
+		String ImPar;
 		if(PI==0) {
-			imprimir.imprimirResultado("Es PAR","Par o Impar");
+			ImPar = "Es PAR";
+			return ImPar;
 		}
 			else {
-			imprimir.imprimirResultado("Es IMPAR","Par o Impar");
+			ImPar = "Es IMPAR";
+			return ImPar;
 		}
 	}
-	public void validarNumeroDe0a9(double n1) {
+	public String validarNumeroDe0a9(double n1) {
+		String mensaje;
 		if( n1<=9 && n1>=0) {
-			String mensaje=n1+" si es un numero :)";
-			imprimir.imprimirResultado(mensaje,"Numeros de 0 a 9");
+			mensaje=n1+" si es un numero entre 0 y 9 :)";
+			return mensaje;
 		}
 		else {
-			imprimir.imprimirResultado("Debe ser entre 0 a 9","Numeros de 0 a 9");
+			mensaje="Debe ser entre 0 a 9";
+			return mensaje;
 		}
 	}
-	public void validarNumerosMenorMayor(double n1,double n2) {
+	public String validarNumerosMenorMayor(double n1,double n2) {
+		String mensaje;
 		if(n1>n2) {
-			String mensaje1 = n2+" --> "+n1 ;
-			imprimir.imprimirResultado(mensaje1,"Menor a Mayor");
+			mensaje = n2+" --> "+n1 ;
+			return mensaje;
 		}
 		else {
-			String mensaje2 = n1+" --> "+n2 ;
-			imprimir.imprimirResultado(mensaje2,"Menor a Mayor");
+			mensaje = n1+" --> "+n2 ;
+			return mensaje;
 		}
 	}
 	

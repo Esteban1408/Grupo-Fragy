@@ -6,12 +6,12 @@ public class UtilsMain {
 
 	public static void leerDatos(int select) {
 		if (select >= 0 && select <= 3 || select == 10) {
-			number1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
-			number2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese otro numero"));
+			number1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero: "));
+			number2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese otro numero: "));
 		} else if (select == 4) {
 			do {
-				number1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
-				number2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese otro numero"));
+				number1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero: "));
+				number2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese otro numero: "));
 				if (number2 == 0) {
 					JOptionPane.showMessageDialog(null, "No se puede dividir entre cero");
 				}
@@ -27,69 +27,81 @@ public class UtilsMain {
 			segundo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo "));
 			amPm = Integer.parseInt(JOptionPane.showInputDialog("¿AM o PM? " + "\n  0       1"));
 		} else if (select == 8 || select == 9) {
-			number1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
+			number1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero: "));
 		}
 	}
 
 	public static void main(String[] args) {
 		int select;
 		boolean salir = false, otraOperacion = false;
+		String mensaje;
 		try {
 			while (!salir && !otraOperacion) {
 				select = Integer.parseInt(JOptionPane.showInputDialog(null,
 						"Eliga una opcion \n1-Sumar \n2-Restar \n3-Multiplicar \n4-Dividir \n5-Celsius a Fahrenheit \n6-Area de un Triangulo \n7-Validar una hora exacta \n8-Numero par o impar \n9-Determinar si un numero es de 0 a 9 \n10-Organizar numeros de menor a mayor \n11-Salir",
-						"Calculadora", JOptionPane.INFORMATION_MESSAGE));
+						"Calculadora ", JOptionPane.INFORMATION_MESSAGE));
 				Utils entrada = new Utils();
 
 				switch (select) {
 				case 1:
 					leerDatos(select);
-					entrada.sumar(number1, number2);
+					mensaje = entrada.sumar(number1, number2);
+					imprimirResultado(mensaje);
 					otraOperacion = entrada.hacerOtraOperacion();
+
 					break;
 				case 2:
 					leerDatos(select);
-					entrada.restar(number1, number2);
+					mensaje = entrada.restar(number1, number2);
+					imprimirResultado(mensaje);
 					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 3:
 					leerDatos(select);
-					entrada.multiplicar(number1, number2);
+					mensaje = entrada.multiplicar(number1, number2);
+					imprimirResultado(mensaje);
 					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 4:
 					leerDatos(select);
-					entrada.division(number1, number2);
+					mensaje = entrada.division(number1, number2);
+					imprimirResultado(mensaje);
 					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 5:
 					leerDatos(select);
-					entrada.celsiusFahrenheit(number1);
+					mensaje = entrada.celsiusFahrenheit(number1);
+					imprimirResultado(mensaje);
 					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 6:
 					leerDatos(select);
-					entrada.areaTriangulo(number1, number2);
+					mensaje = entrada.areaTriangulo(number1, number2);
+					imprimirResultado(mensaje);
 					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 7:
 					leerDatos(select);
-					entrada.horaExacta(hora, minuto, segundo, amPm);
+					mensaje = entrada.horaExacta(hora, minuto, segundo, amPm);
+					imprimirResultado(mensaje);
 					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 8:
 					leerDatos(select);
-					entrada.validarNumeroParImpar(number1);
+					mensaje = entrada.validarNumeroParImpar(number1);
+					imprimirResultado(mensaje);
 					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 9:
 					leerDatos(select);
-					entrada.validarNumeroDe0a9(number1);
+					mensaje = entrada.validarNumeroDe0a9(number1);
+					imprimirResultado(mensaje);
 					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 10:
 					leerDatos(select);
-					entrada.validarNumerosMenorMayor(number1, number2);
+					mensaje = entrada.validarNumerosMenorMayor(number1, number2);
+					imprimirResultado(mensaje);
 					otraOperacion = entrada.hacerOtraOperacion();
 					break;
 				case 11:
@@ -106,7 +118,7 @@ public class UtilsMain {
 		}
 	}
 
-	public void imprimirResultado(String mensaje, String operacion) {
-		JOptionPane.showMessageDialog(null, mensaje, operacion, JOptionPane.INFORMATION_MESSAGE);
+	public static void imprimirResultado(String mensaje) {
+		JOptionPane.showMessageDialog(null, mensaje);
 	}
 }
