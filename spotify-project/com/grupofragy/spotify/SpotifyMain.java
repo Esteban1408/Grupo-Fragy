@@ -1,5 +1,7 @@
 package com.grupofragy.spotify;
 
+import javax.swing.JOptionPane;
+
 import com.grupofragy.spotify.models.Artista;
 import com.grupofragy.spotify.models.Cancion;
 import com.grupofragy.spotify.models.Playlist;
@@ -11,12 +13,15 @@ public class SpotifyMain {
 	}
 	public static void main(String[] args) {
 		Usuario usuario1 = new Usuario();
-		usuario1.asignarNombre("Pepe Casillas");
+		nombre=JOptionPane.showInputDialog("Ingrese nombre del usuario");
+		contraseña=JOptionPane.showInputDialog("Ingrese la contraseña del usuario");
+		usuario1.asignarNombre(nombre);
 		usuario1.asignarCorreo("pepe@gmail.com");
-		usuario1.asignarContraseña("qweqwe231");
+		usuario1.asignarContraseña(contraseña);
 		usuario1.asignarfechaNacimiento("25/08/2001");
 		usuario1.asignarSexo("M");
 		usuario1.asignarRecibirPublicidad("S");
+		usuario1.verificacion();
 		String nombre1="Nombre: "+usuario1.obtenerNombre();
 		String correo1="Correo: "+usuario1.obtenerCorreo();
 		String contraseña1="Contraseña: "+usuario1.obtenerContraseña();
